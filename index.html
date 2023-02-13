@@ -11,30 +11,37 @@
         function getComputerChoice (rock, paper,scissors) {
             let computerSelection = Math.floor(Math.random()*3) + 1;
             if (computerSelection === 1) {
-                const rock = "rock"
+                const rock = "rock";
                 return rock;
             }
             else if (computerSelection === 2) {
-                const paper = "paper"
+                const paper = "paper";
                 return paper;
             }
            else if(computerSelection === 3) {
-                const scissors = "scissors"
+                const scissors = "scissors";
                return scissors;
            }
         }
         let playerSelection = 'rock'
 
         function playRound (playerSelection,computerSelection) {
-            if(playerSelection === 'rock' && computerSelection === rock ) 
-             console.log("It's a tie")
-            else if (playerSelection === 'rock' && computerSelection === 2)
-             console.log("Human wins, Computer loses")
-            else if(playerSelection === 'rock' && computerSelection == 3)
-            console.log("Human wins, Computer loses")
-        }    
+            if(playerSelection === 'rock' && computerSelection == rock ) {
+             const tie = "It's a tie";
+             return tie;
+            }
+            else if (playerSelection == 'rock' && computerSelection == 2) {
+             const humanWins = "Human wins, Computer loses";
+            return humanWins;
+            }
+            else if(playerSelection == 'rock' && computerSelection == 3) {
+            return humanWins;
+            }    
+        }
         const computerSelection = getComputerChoice();
         console.log(computerSelection);
+        const round = playRound();
+        console.log(round);
     </script>
 </body>
 </html>
