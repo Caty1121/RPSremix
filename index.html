@@ -23,23 +23,35 @@
                return scissors;
            }
         }
-        let playerSelection = 'rock'
+        let playerSelection = prompt('enter choice')
 
         function playRound (playerSelection, computerSelection) {
-            if(playerSelection === computerSelection ) {
-             return "It's a tie";
+            if (playerSelection === computerSelection ) {
+                return "It's a tie";
             }
             else if (playerSelection === 'rock' && computerSelection === 'paper') {
-             return "Human wins, Computer loses";
+                return "Human wins, Computer loses";
             }
-            else if(playerSelection === 'rock' && computerSelection === 'scissors') {
-            return "Human wins, Computer loses";
+            else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+                return "Human wins, Computer loses";
+            }
+            else if (playerSelection === 'paper' && computerSelection === 'rock') {
+                return "Computer wins, human loses";
+            }
+            else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+                return "Computer wins, human loses";
+            }
+            else if (playerSelection === 'scissors' && computerSelection  === 'paper') {
+                return "Human wins, Computer loses";
+            }
+            else {
+                "Computer wins, human loses";
             }    
         }
         const computerSelection = getComputerChoice();
-        console.log(computerSelection);
-        const result = playRound(playerSelection, computerSelection);
-        console.log(result);
+        console.log("Computer choses:",computerSelection);
+        const result = playRound(playerSelection.toLowerCase(), computerSelection);
+        console.log("Ding, ding, ding.",result);
     </script>
 </body>
 </html>
